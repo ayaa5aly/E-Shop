@@ -1,6 +1,8 @@
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
+
 const Navbar = () => {
     const products = useSelector((state) => state.cart.products);
 
@@ -26,6 +28,7 @@ const Navbar = () => {
                         {products.length > 0 && (
                             <span className="absolute top-0 text-xs w-3 left-3 bg-red-600 rounded-full flex justify-center items-center text-white ">
                                 {products.length}
+                           
                             </span>
                         )}{" "}
                     </Link>
